@@ -13,14 +13,16 @@ figure; hold on;
 %
 
 % Find Indices of Positive and Negative Examples 
+% 返回 y=1 以即 y=0 时的坐标
 pos = find(y == 1); 
 neg = find(y == 0);
 
 % Plot Examples
 plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2,'MarkerSize', 7);
+% 当y=1时，X的第一列为横轴，X的第二列为纵轴
 
 plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y','MarkerSize', 7);
-
+% 当y=0时，X的第一列为横轴，X的第二列为纵轴
 % =========================================================================
 
 
